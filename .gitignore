@@ -1,0 +1,61 @@
+# Test URI
+# Ignore netbeans folder
+nbproject/*
+
+# Ignore private folder
+/libs/cakephp/apps/ssf4ae/private/*
+!/libs/cakephp/apps/ssf4ae/private/empty
+
+# Ignore packed asset files
+/libs/cakephp/apps/ssf4ae/webroot/css/packed/*
+!app/webroot/css/packed/.htaccess
+/libs/cakephp/apps/ssf4ae/webroot/js/packed/*
+!app/webroot/js/packed/.htaccess
+
+# MAC
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Eclipse project files
+/.cache
+.project
+/.settings
+.buildpath
+
+# Cake config Dirs
+/libs/cakephp/apps/ssf4ae/config/*
+!/libs/cakephp/apps/ssf4ae/config/
+
+# Cake TMP Dirs
+/libs/cakephp/apps/ssf4ae/tmp/*
+!/libs/cakephp/apps/ssf4ae/tmp/
+
+/libs/cakephp/apps/ssf4ae/tmp/cache/*
+!/libs/cakephp/apps/ssf4ae/tmp/cache/
+!/libs/cakephp/apps/ssf4ae/tmp/cache/empty
+
+/libs/cakephp/apps/ssf4ae/tmp/cache/models/*
+!/libs/cakephp/apps/ssf4ae/tmp/cache/models/
+!/libs/cakephp/apps/ssf4ae/tmp/cache/models/empty
+
+/libs/cakephp/apps/ssf4ae/tmp/cache/persistent/*
+!/libs/cakephp/apps/ssf4ae/tmp/cache/persistent/
+!/libs/cakephp/apps/ssf4ae/tmp/cache/persistent/empty
+
+/libs/cakephp/apps/ssf4ae/tmp/cache/views/*
+!/libs/cakephp/apps/ssf4ae/tmp/cache/views/
+!/libs/cakephp/apps/ssf4ae/tmp/cache/views/empty
+
+/libs/cakephp/apps/ssf4ae/tmp/logs/*
+!/libs/cakephp/apps/ssf4ae/tmp/logs/
+!/libs/cakephp/apps/ssf4ae/tmp/logs/empty
+
+/libs/cakephp/apps/ssf4ae/tmp/sessions/*
+!/libs/cakephp/apps/ssf4ae/tmp/sessions/
+!/libs/cakephp/apps/ssf4ae/tmp/sessions/empty
+
+/libs/cakephp/apps/ssf4ae/tmp/tests/*
+!/libs/cakephp/apps/ssf4ae/tmp/tests/
+!/libs/cakephp/apps/ssf4ae/tmp/tests/empty

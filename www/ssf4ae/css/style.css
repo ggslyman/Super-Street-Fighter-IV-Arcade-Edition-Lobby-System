@@ -1,0 +1,206 @@
+html,body {
+	width: 100%;
+}
+
+#container{
+	width: 100%;
+}
+#header{
+	height:20px;
+	width: 100%;
+}
+#content{
+	margin-top: 20px;
+	border-top: 1px solid gray;
+	width: 100%;
+}
+#left_content{
+	padding: 0;
+	margin : 0;
+	width: 180px;
+	min-height:100%;	/*IE6以外で適用*/
+	text-align: left;
+	float: left;
+}
+#right_content{
+	border-left: 1px solid gray;
+	float: left;
+	display: block;
+}
+
+#footer{
+	clear:left;
+}
+
+body > #left_content,
+body > #right_content{
+	height:auto;	/*IE6以外で適用*/
+}
+
+table.view {
+	border-collapse:separate;
+	border-spacing:2px;
+	font-size:100%;
+	margin-bottom:1em;
+	margin-top:0em;
+}
+table.view caption {
+	margin-top:1em;
+	text-align:right;
+}
+	table.view th, div#main div.section table.view td {
+	padding:4px 6px;
+}
+table.view th {
+	background:none repeat scroll 0 0 #8888FF;
+	font-size:92%;
+	text-align:center;
+	white-space:nowrap;
+}
+
+table.view th a:link{
+	background:none repeat scroll 0 0 #8888FF;
+	font-size:92%;
+	text-align:center;
+	white-space:nowrap;
+}
+
+table.view th a:visited{
+	background:none repeat scroll 0 0 #8888FF;
+	font-size:92%;
+	text-align:center;
+	white-space:nowrap;
+}
+
+table.view tr {
+	background:none repeat scroll 0 0 #E5EAFF;
+}
+
+table.view tr:hover {
+	background:none repeat scroll 0 0 #8888FF;
+}
+.clearfix:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.clearfix {
+  min-height: 1px;
+}
+
+* html .clearfix {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+/* tables */
+table.tablesorter {
+	border-collapse:separate;
+	border-spacing:2px;
+	font-size:100%;
+	margin-bottom:1em;
+	margin-top:0em;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	background:none repeat scroll 0 0 #8888FF;
+	border: 0px none #FFFFFF;
+	font-size:92%;
+	white-space:nowrap;
+}
+table.tablesorter thead tr .header {
+	background-image: url(../img/bg.gif);
+	text-indent: 1.2em;
+	background-repeat: no-repeat;
+	background-position: center left;
+	cursor: pointer;
+}
+table.tablesorter tbody tr {
+	color: #3D3D3D;
+	background-color: #E5EAFF;
+}
+table.tablesorter tbody td {
+	border: 0px none #FFFFFF;
+	padding: 4px;
+	vertical-align: top;
+}
+table.tablesorter tbody tr.odd td {
+	background-color:#E5EAFF;
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(../img/asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(../img/desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+	background-color: #8888FF;
+}
+table.tablesorter tbody tr:hover {
+	background:none repeat scroll 0 0 #8888FF;
+	color:#FFFFFF;
+}
+body#root
+{
+	background-image: url('../img/bg.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	-webkit-background-size: 100% 100%;"
+}
+div#description
+{
+	display:none;
+	font-weight: bold;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #FFFFFF;
+	color:#000000;
+    font-weight: bold;
+    opacity: 0.8;
+    filter:progid:DXImageTransform.Microsoft.Alpha(Enabled=1,Style=0,Opacity=80);
+}
+h2#title
+{
+    background: #FFFFFF;
+    width: 100%;
+	color:#000000;
+    opacity: 0.6;
+    filter:progid:DXImageTransform.Microsoft.Alpha(Enabled=1,Style=0,Opacity=60);
+}
+h3#time
+{
+    background: #FFFFFF;
+    width: 100%;
+	color:#000000;
+    opacity: 0.6;
+    filter:progid:DXImageTransform.Microsoft.Alpha(Enabled=1,Style=0,Opacity=60);
+}
+h2#title
+{
+    background: #FFFFFF;
+    width: 100%;
+	color:#000000;
+    opacity: 0.6;
+    filter:progid:DXImageTransform.Microsoft.Alpha(Enabled=1,Style=0,Opacity=60);
+}
+div#open
+{
+    background: #FFFFFF;
+	color:#000000;
+    opacity: 0.6;
+    filter:progid:DXImageTransform.Microsoft.Alpha(Enabled=1,Style=0,Opacity=60);
+}
+div#toentry
+{
+    background: #FFFFFF;
+    width: 220px;
+	color:#000000;
+    opacity: 0.6;
+    filter:progid:DXImageTransform.Microsoft.Alpha(Enabled=1,Style=0,Opacity=60);
+}
