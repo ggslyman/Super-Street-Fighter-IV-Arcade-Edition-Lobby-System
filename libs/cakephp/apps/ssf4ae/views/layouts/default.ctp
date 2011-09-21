@@ -26,7 +26,6 @@
 	</title>
 	<?php
 		echo $this->Html->meta('icon');
-		echo $this->Html->css(array('style','anytime'));
 		echo $scripts_for_layout;
 	?>
 </head>
@@ -42,7 +41,7 @@
 
 		</div>
 		<div id="footer">
-			連絡先：thtv83pvewovあっとgmail.com
+			連絡先：vash.tan.hpあっとgmail.com
 		</div>
 	</div>
 	<?php //echo $this->element('sql_dump'); ?>

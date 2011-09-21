@@ -138,6 +138,36 @@
 						}
 					}
 				}
+			//対戦受付終了処理
+			}elseif(isset($this->params['form']['fight_start']) && strlen($this->data["Ssf4ae_entry"]["password"])>=1){
+				$conditions = array(
+					'conditions' => array(
+							'Ssf4ae_entry.ssf4ae_entry_id' => $this->data['Ssf4ae_entry']['ssf4ae_entry_id']
+					)
+				);
+				$load_data = $this->Ssf4ae_entry->find('first',$conditions);
+				if($load_data){
+					if($load_data["Ssf4ae_entry"]["password"]==md5($this->data["Ssf4ae_entry"]["password"])){
+						$del_data["Ssf4ae_entry"]["now_fight_flag"] = 1;
+						$del_data["Ssf4ae_entry"]["ssf4ae_entry_id"] = $load_data["Ssf4ae_entry"]["ssf4ae_entry_id"];
+						$this->Ssf4ae_entry->save($del_data);
+					}
+				}
+			//対戦受付開始処理
+			}elseif(isset($this->params['form']['fight_end']) && strlen($this->data["Ssf4ae_entry"]["password"])>=1){
+				$conditions = array(
+					'conditions' => array(
+							'Ssf4ae_entry.ssf4ae_entry_id' => $this->data['Ssf4ae_entry']['ssf4ae_entry_id']
+					)
+				);
+				$load_data = $this->Ssf4ae_entry->find('first',$conditions);
+				if($load_data){
+					if($load_data["Ssf4ae_entry"]["password"]==md5($this->data["Ssf4ae_entry"]["password"])){
+						$del_data["Ssf4ae_entry"]["now_fight_flag"] = 0;
+						$del_data["Ssf4ae_entry"]["ssf4ae_entry_id"] = $load_data["Ssf4ae_entry"]["ssf4ae_entry_id"];
+						$this->Ssf4ae_entry->save($del_data);
+					}
+				}
 			}
 			//現在募集中の登録者
 			//$this->paginate = array(
@@ -184,20 +214,20 @@
 			// ajax用のレイアウトを使用
 			$this->layout = "ajax";
 			// ajaxによる呼び出し？
-			if($this->RequestHandler->isAjax()) {
+			//if($this->RequestHandler->isAjax()) {
 				$this->loadModel('Ssf4ae_entry');
 				$now_date = new DateTime();
 				$end_date = $now_date->format('Y/m/d H:i:s');
-				date_sub($now_date, date_interval_create_from_date_string('1 hours'));
+				date_add($now_date, date_interval_create_from_date_string('1 hours'));
 				$start_date = $now_date->format('Y/m/d H:i:s');
 				$params = array(
 					'conditions' => array(
-						'Ssf4ae_entry.start_datetime >=' => $start_date,
+						'Ssf4ae_entry.start_datetime <=' => $start_date,
 						'Ssf4ae_entry.end_datetime >' => $end_date
 						,'Ssf4ae_entry.delete_flag' => 0
 						)
 					,
-					'order' => array('Ssf4ae_entry.start_datetime'=>'DESC'),
+					'order' => array('Ssf4ae_entry.created'=>'DESC'),
 					'limit' => 1
 					);
 				//$entrys = $this->paginate('Ssf4_entry');
@@ -207,14 +237,14 @@
 				}else{
 					$this->set('last_update',null);
 				}
-			}
+			//}
 			$this->render();
 		}
 		/*********************************************************************
 			RRGGBBの自動生成関数
 			Googleのグラフ出力APIで使用
 		*********************************************************************/
-		function get_col(){
+		function _get_col(){
 			$r = rand(128,255); 
 			$g = rand(128,255); 
 			$b = rand(128,255); 
